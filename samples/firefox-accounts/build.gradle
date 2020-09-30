@@ -42,6 +42,7 @@ dependencies {
     implementation project(':support-rustlog')
     implementation project(':support-rusthttp')
     implementation project(':lib-fetch-httpurlconnection')
+    implementation project(':service-nimbus')
 
     implementation Dependencies.androidx_constraintlayout
 

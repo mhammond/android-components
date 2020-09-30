@@ -29,6 +29,7 @@ import mozilla.components.support.base.log.Log
 import mozilla.components.support.base.log.sink.AndroidLogSink
 import mozilla.components.support.rustlog.RustLog
 import kotlin.coroutines.CoroutineContext
+import mozilla.components.service.nimbus.Nimbus
 
 @Suppress("TooManyFunctions")
 open class MainActivity : AppCompatActivity(), LoginFragment.OnLoginCompleteListener, CoroutineScope {
@@ -59,6 +60,8 @@ open class MainActivity : AppCompatActivity(), LoginFragment.OnLoginCompleteList
         RustHttpConfig.setClient(lazy { HttpURLConnectionClient() })
 
         Log.addSink(AndroidLogSink())
+
+        Nimbus.initialize(this);
 
         setContentView(R.layout.activity_main)
         job = Job()
