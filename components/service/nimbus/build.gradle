@@ -28,14 +28,14 @@ android {
 }
 
 dependencies {
-    api Dependencies.uniffi_nimbus
+    api Dependencies.mozilla_nimbus
 
     implementation Dependencies.kotlin_stdlib
     implementation Dependencies.kotlin_coroutines
     implementation project(':service-glean')
     implementation project(':support-base')
 
-    testImplementation Dependencies.uniffi_nimbus_forUnitTests
+    testImplementation Dependencies.mozilla_full_megazord_forUnitTests
     testImplementation Dependencies.androidx_test_core
     testImplementation Dependencies.androidx_test_junit
     testImplementation Dependencies.testing_mockito

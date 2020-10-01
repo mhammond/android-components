@@ -16,7 +16,7 @@ import mozilla.components.support.base.coroutines.Dispatchers
 import mozilla.components.support.base.log.Log
 import uniffi.nimbus.AppContext
 import uniffi.nimbus.EnrolledExperiment
-import uniffi.nimbus.Nimbus as NimbusSDK
+import uniffi.nimbus.NimbusClient as NimbusSDK
 import java.io.File
 import java.util.Locale
 
@@ -85,7 +85,7 @@ open class NimbusInternalAPI internal constructor() {
 
     init {
         // Set the name of the native library
-        System.setProperty("uniffi.component.nimbus.libraryOverride", "nimbus")
+        System.setProperty("uniffi.component.nimbus.libraryOverride", "megazord")
     }
 
     /**
